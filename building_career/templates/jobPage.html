@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{job[0][1]}} -{{Employee}} careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    {% include 'nav.html' %}
+    <img src="/static/jobs.jpg" class="img-fluid">
+    <div class="container">
+        <h1 class="text-center">{{Employee}} Careers</h1>
+        <hr>
+        <h2 class="mb-5" style="color: grey;">{{job[0][1]}}</h2>
+        <p class="lead">{{job[0][2]}}</p>
+        <h4>Responsibilities :</h4>
+        {% if job[0][5] != None %}
+        <ul>
+            {% for line in job[0][5].split(",") %}
+            <li>{{line}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <h4>Requirements :</h4>
+        {% if job[0][6] != None %}
+        <ol>
+            {% for line in job[0][6].split(",") %}
+            <li>{{line}}</li>
+            {% endfor %}
+        </ol>
+        {% endif %}
+
+
+        <h4>Salary :</h4>
+        <p>{{job[0][4]}}{{job[0][3]}}</p>
+
+
+
+
+        {% include 'application_form.html' %}
+    </div>
+
+
+    <div class="text-center">
+        <a href="mailto:tona@gmail.com?subject=Questions%20&body=My%20Name%20%3A%20%3Cput%20your%20name%20here%3E%0D%0AQuestions%20%3A%20%3Cput%20your%20questions%20here%3E" class="btn btn-outline-primary">Contact Us</a>
+        <p class="text-primary mt-3">Copyrights 2024 , Tona</p>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            position:absolute;
+            bottom: 200px;
+            right:  40%;
+
+        }
+        #contact{
+            position:absolute;
+            bottom: 50px;
+            right:  47%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" aria-disabled="true">Welcome</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+    <div class="login-container">
+    <h2 class="text-center mb-4">Sign Up</h2>
+    <form action="/signup" method="post">
+        <div class="mb-3">
+            <label for="username" class="form-label">Enter Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">Enter Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
+        </div>
+        <div class="mb-4">
+            <label for="password" class="form-label">Enter Password again</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    </form>
+
+</div>
+
+<div class="text-center" id="contact">
+    <a href="mailto:tona@gmail.com?subject=Questions%20&body=My%20Name%20%3A%20%3Cput%20your%20name%20here%3E%0D%0AQuestions%20%3A%20%3Cput%20your%20questions%20here%3E" class="btn btn-outline-primary">Contact Us</a>
+    <p class="text-primary mt-3">Copyrights 2024 , Tona</p>
+</div>
+</body>
+</html>
