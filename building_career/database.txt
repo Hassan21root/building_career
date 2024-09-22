@@ -62,6 +62,4 @@ values(2,"DR.Hossam","introduction to clouding",1500);
 
 
 
--- future work add vaildation to the input fileds 
--- add an application for courses 
--- create admin login interface to check the submitted applications and courses and mark them as accepted or rejected
+
